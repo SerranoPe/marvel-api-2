@@ -25,7 +25,7 @@ function connection() {
   var name = document.getElementById("name").value;
   var params = "name=" + name;
 
-  xhr.open("GET", "./connections/name-search.php?" + params, true);
+  xhr.open("GET", "./connections/name-search.html?" + params, true);
 
   xhr.onloadstart = function() {
     document.getElementById("characterSpinnerSection").innerHTML =
@@ -131,7 +131,7 @@ function comics(characterID) {
 
   xhr.open(
     "GET",
-    "./connections/character.php?character-id=" + characterID,
+    "./connections/character.html?character-id=" + characterID,
     true
   );
 
@@ -165,7 +165,7 @@ function comics(characterID) {
 
             output +=
               '<div class="card">' +
-              '<a href="./comic.php?comic-id=' +
+              '<a href="./comic.html?comic-id=' +
               comic.id +
               '"><img src="' +
               comic.thumbnail["path"] +
@@ -247,7 +247,7 @@ function singleComic() {
 
   var xhr = new XMLHttpRequest();
 
-  xhr.open("GET", "./connections/single-comic.php?comic-id=" + comicID, true);
+  xhr.open("GET", "./connections/single-comic.html?comic-id=" + comicID, true);
   xhr.onloadstart = function() {
     document.getElementById("comicsSpinnerSection").innerHTML =
       '<strong id="spinnerText" class="text-secondary">Loading comic info...</strong>' +
@@ -297,7 +297,7 @@ function singleComic() {
         if (comicCharacters.hasOwnProperty(i)) {
           const character = comicCharacters[i];
           output +=
-            '<a href="./index.php?name=' +
+            '<a href="./index.html?name=' +
             character.name +
             '">' +
             character.name +
@@ -319,7 +319,7 @@ function singleComic() {
               url.pathname.lastIndexOf("/") + 1
             );
           output +=
-            '<a href="./creator.php?creator-id=' +
+            '<a href="./creator.html?creator-id=' +
             creatorID +
             '">' +
             creator.name.concat(" (" + creator.role + "), ") +
@@ -358,7 +358,7 @@ function comicCreator() {
     creatorID = urlQueryParameters.get("creator-id"),
     xhr = new XMLHttpRequest();
 
-  xhr.open("GET", "./connections/creator.php?creator-id=" + creatorID, true);
+  xhr.open("GET", "./connections/creator.html?creator-id=" + creatorID, true);
 
   xhr.onloadstart = function() {
     document.getElementById("comicCreatorSpinnerSection").innerHTML =
@@ -454,7 +454,7 @@ function creatorSingleComic(comicResourceURI) {
     comicID = url.pathname.substring(url.pathname.lastIndexOf("/") + 1),
     xhr = new XMLHttpRequest();
 
-  xhr.open("GET", "./connections/single-comic.php?comic-id=" + comicID, true);
+  xhr.open("GET", "./connections/single-comic.html?comic-id=" + comicID, true);
 
   xhr.onloadstart = function() {
     document.getElementById("comicCreatorSpinnerSection1").innerHTML =
@@ -475,7 +475,7 @@ function creatorSingleComic(comicResourceURI) {
       output =
         '<div class="col-md-4" >' +
         '<div class="card mb-3">' +
-        '<a href="./comic.php?comic-id=' +
+        '<a href="./comic.html?comic-id=' +
         comicInfo.id +
         '">' +
         '<img src="' +
@@ -496,7 +496,7 @@ function creatorSingleComic(comicResourceURI) {
           "</small></p>";
       }
       output +=
-        '<a href="./comic.php?comic-id=' +
+        '<a href="./comic.html?comic-id=' +
         comicInfo.id +
         '">Check it out!</a>' +
         "</div>" +

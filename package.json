@@ -2,7 +2,7 @@
   "name": "marvel-comics-search-api",
   "version": "1.0.0",
   "description": "marvel comics api search",
-  "main": "index.php",
+  "main": "index.html",
   "dependencies": {},
   "devDependencies": {
     "live-server": "^1.2.1"
