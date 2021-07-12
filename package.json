@@ -1,0 +1,25 @@
+{
+  "name": "marvel-comics-search-api",
+  "version": "1.0.0",
+  "description": "marvel comics api search",
+  "main": "index.php",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SerranoPe/marvel-api-2.git"
+  },
+  "keywords": [
+    "marvel"
+  ],
+  "author": "Peter Serrano",
+  "bugs": {
+    "url": "https://github.com/SerranoPe/marvel-api-2.git"
+  },
+  "homepage": "https://github.com/SerranoPe/marvel-api-2.git"
+}
